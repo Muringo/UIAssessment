@@ -12,11 +12,15 @@ import org.w3c.dom.Comment;
 
 import java.util.List;
 
-class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentsViewHolder> {
-    private final List<Comment> commentsList;
+class CommentsAdapter extends RecyclerView.Adapter<CommentsAdapter.CommentsViewHolder> {
+    private List<Comment> commentsList;
 
-    public CommentAdapter(List<Comment> commentsList) {
+    public CommentsAdapter(List<Comment> commentsList) {
         this.commentsList = commentsList;
+    }
+
+    public void setComments() {
+        notifyDataSetChanged();
     }
 
     @NonNull
@@ -28,7 +32,7 @@ class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentsViewHol
 
     @Override
     public void onBindViewHolder(@NonNull CommentsViewHolder holder, int position) {
-        CommentsModel comment = (CommentsModel) commentsList.get(position);
+        CommentModel comment = (CommentModel) commentsList.get(position);
         holder.bind(comment);
     }
 
@@ -49,7 +53,7 @@ class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.CommentsViewHol
             likeButton = itemView.findViewById(R.id.likeButton);
         }
 
-        public void bind(CommentsModel comment) {
+        public void bind(CommentModel comment) {
             usernameTextView.setText(comment.getUsername());
             commentTextView.setText(comment.getText());
             likeButton.callOnClick();

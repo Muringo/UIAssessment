@@ -55,15 +55,16 @@
             android:layout_height="75dp"
             android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
+            android:background="@null"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/starr" />
+            app:srcCompat="@drawable/ic_baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
+            android:layout_marginStart="80dp"
             android:layout_marginTop="20dp"
             android:text="@string/text2"
             app:layout_constraintStart_toStartOf="@+id/imageView4"
@@ -73,8 +74,8 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="75dp"
-            android:layout_marginTop="43dp"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="45dp"
             android:text="@string/text3"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -84,8 +85,8 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="115dp"
-            android:layout_marginTop="43dp"
+            android:layout_marginStart="114dp"
+            android:layout_marginTop="45dp"
             android:text="@string/text4"
             android:textSize="12sp"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
@@ -96,7 +97,7 @@
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
+            android:layout_marginStart="145dp"
             android:layout_marginTop="17dp"
             app:layout_constraintStart_toEndOf="@+id/textView2"
             app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -106,7 +107,7 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="176dp"
+            android:layout_marginStart="172dp"
             android:layout_marginTop="17dp"
             android:text="@string/text5"
             app:layout_constraintStart_toEndOf="@+id/imageView5"
@@ -193,9 +194,9 @@
 
             <Button
                 android:id="@+id/button4"
-                android:layout_width="180dp"
+                android:layout_width="174dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/buttons"
                 app:backgroundTint="@color/grey"
                 android:text="@string/text12"
@@ -203,9 +204,9 @@
 
             <Button
                 android:id="@+id/button5"
-                android:layout_width="80dp"
+                android:layout_width="73dp"
                 android:layout_height="35dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="8dp"
                 android:background="@drawable/buttons"
                 app:backgroundTint="@color/grey"
                 android:text="@string/top"
@@ -312,7 +313,7 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/recyclerLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -328,11 +329,11 @@
             android:layout_height="wrap_content"
             tools:listitem="@layout/comment_item" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:orientation="horizontal"
         android:layout_marginStart="15dp"
         android:layout_marginTop="20dp"
@@ -343,21 +344,20 @@
             android:id="@+id/imageButton"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
-            android:layout_marginStart="10dp"
             android:src="@drawable/ic_baseline_image_24"
             android:background="@null"
             app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id = "@+id/layoutReply"
-            android:layout_width = "300dp"
+            android:layout_width = "270dp"
             android:layout_height = "50dp"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="30dp"
             app:layout_constraintStart_toStartOf="parent"
             style = "@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
             <com.google.android.material.textfield.TextInputEditText
                 android:id = "@+id/reply"
-                android:layout_width = "300dp"
+                android:layout_width = "270dp"
                 android:layout_height = "50dp"
                 android:text = "@string/text13" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -367,7 +367,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:layout_marginStart="350dp"
+            android:layout_marginStart="310dp"
             android:text="@string/text14"
             app:layout_constraintStart_toEndOf="@id/layoutReply"/>
 

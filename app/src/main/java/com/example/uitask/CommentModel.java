@@ -3,7 +3,7 @@ package com.example.uitask;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CommentsModel {
+public class CommentModel {
     private String profilePhoto;
     private String username;
     private String text;
@@ -12,7 +12,7 @@ public class CommentsModel {
 
 
 
-    public CommentsModel(String profilePhoto, String username, String text, String likes) {
+    public CommentModel(String profilePhoto, String username, String text, String likes) {
         this.profilePhoto = profilePhoto;
         this.username = username;
         this.text = text;
